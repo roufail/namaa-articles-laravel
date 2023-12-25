@@ -12,7 +12,7 @@
 
 
 
-                @if(auth()->check() && auth()->user()->can('edit others articles') || ( auth()->user()->can('edit article') && $article->user->id === auth()->user()->id))
+                @if(auth()->check() && (auth()->user()->can('edit others articles') || ( auth()->user()->can('edit article') && $article->user->id === auth()->user()->id)))
                 <div class="float-end edit-button">
                     <a class="link" href="{{ route('admin.articles.edit',['article' => $article])}}">
                         {{ __('Edit') }}
