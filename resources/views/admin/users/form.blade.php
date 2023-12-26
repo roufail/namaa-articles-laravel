@@ -15,7 +15,7 @@
 
 
                     <!-- table --> 
-                    <div class="w-full max-w-xs">
+                    <div class="w-full">
                         <div>{{  $user->id ? 'Edit user' : 'New user' }}</div>
                         <form class="bg-white rounded px-8 pt-6 pb-8 mb-4" method="post" action="{{ $user->id ? route('admin.users.update', ['user' => $user]) : route('admin.users.store') }}" >
                             @csrf
