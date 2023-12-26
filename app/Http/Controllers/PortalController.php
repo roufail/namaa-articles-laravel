@@ -26,6 +26,7 @@ class PortalController extends Controller
 
 
     public function article(Article $article) {
+        if(!$article->approved) abort(404);
         $article->load('approvedcomments.user');
         return view('portal.articles.show',compact('article'));
     }
