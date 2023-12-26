@@ -1,12 +1,10 @@
--- laravel 
-composer install
-php artisan migrate --seed
-php artisan breeze:install
- - blade
- - no
- - PHPUnit
+-- laravel <br />
+-- composer install <br />
+-- php artisan migrate --seed <br />
+-- php artisan breeze:install <br />
+   - blade <br />
+   - no <br />
+   - PHPUnit <br />
 
-
-npm install
-
-npm run build
+-- npm install <br />
+-- npm run build <br />
