@@ -66,10 +66,10 @@
 
                         <div class="md:flex md:items-center">
                             <div class="md:w-2/3">
-                              <button class="bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded" type="submit">
+                              <button class="bg-gray-500 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded" type="submit">
                                 Save
                               </button>
-                              <button class="bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded" type="reset">
+                              <button class="bg-gray-500 focus:shadow-outline focus:outline-none text-black font-bold py-2 px-4 rounded" type="reset">
                                 Reset
                               </button>
                             </div>
