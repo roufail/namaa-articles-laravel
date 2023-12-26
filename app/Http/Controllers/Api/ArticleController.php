@@ -12,7 +12,7 @@ class ArticleController extends Controller
     public function articles(Request $request){
         $articles = Article::approved();
         if($request->has('search')) {
-            $articles = $articles->where('title','like', '%'.$request->search.'%');
+            $articles = $articles->where('title','like', '%'.$request->search.'%')->orwhere('content','like', '%'.$request->search.'%');
         }
         $articles = $articles->select('id','title','approved','user_id','created_at')->with(['user:id,name'])->orderbyDesc('created_at')->paginate(10);
         return  $this->success(new ArticleCollection($articles),'Articles Retrived Successfully');
