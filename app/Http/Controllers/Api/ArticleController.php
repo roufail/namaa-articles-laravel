@@ -19,6 +19,7 @@ class ArticleController extends Controller
     }
 
     public function article(Article $article){
+        if(!$article->approved) abort(404);
         $article->load(['user:id,name','approvedcomments']);
         return  $this->success(new ArticleResource($article),'Article Retrived Successfully');
     }
